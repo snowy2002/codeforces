@@ -132,8 +132,6 @@ void solve() {
     pw1[0] = pw2[0] = 1;
     int B1 = 1e5 + 9;
     int B2 = 1e6 + 9;
-    // pw1[1] = 1e5 + 9;
-    // pw2[1] = 1e6 + 9;
 
     for(int i = 1; i <= N; i++) {
         pw1[i] = pw1[i - 1] * B1 % mod1;
@@ -150,13 +148,7 @@ void solve() {
 
 
     vector<int> root(n + 1);
-    // cout << st.query(root[4], 1, N, 4, 4) << "!!!\n";
-    // cout << st.query(root[2], 1, N, 4, 4) << "!!!!!!\n";
     auto dfs = [&](auto dfs, int x, int fa) -> void {
-        // if(x == 4) {
-            // cout << "X:" << x << " " << "fa:" << fa << "\n";
-        // }
-        // cout << a[x] << "!!!>>>>\n";
         st.modify(root[x], 1, N, a[x], 1, root[fa]);
         for(int i : tr.g[x]) {
             if(i == fa) continue;

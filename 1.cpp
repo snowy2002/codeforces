@@ -6,7 +6,7 @@ mt19937_64 rnd(time);
 #define int long long
 
 int read() {int x;cin>>x;return x;}
-asd
+
 signed main() {
     #ifdef ONLINE_JUDGE
         ios::sync_with_stdio(false);
